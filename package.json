@@ -1,0 +1,41 @@
+{
+  "name": "@mcasaresmdevz/netspective-universal-lib",
+  "version": "1.12.7",
+  "description": "",
+  "module": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcasaresmdevz/netspective-universal-lib.git"
+  },
+  "scripts": {
+    "compile-ts": "tsc",
+    "test": "exit 0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mozilla/readability": "^0.4.2",
+    "dompurify": "^3.0.1",
+    "drizzle-orm": "^0.22.0",
+    "jsdom": "^21.1.1",
+    "mdast": "^3.0.0",
+    "mdast-util-mdx-jsx": "^2.1.2",
+    "postgres": "^3.3.4",
+    "unist-util-visit": "^4.1.2",
+    "vfile": "^5.3.7",
+    "vitest": "^0.29.7",
+    "yaml": "^2.2.1",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@types/dompurify": "^2.4.0",
+    "@types/jsdom": "^21.1.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.2.1"
+  }
+}
