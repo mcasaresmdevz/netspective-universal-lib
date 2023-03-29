@@ -1,6 +1,6 @@
 {
   "name": "@mcasaresmdevz/netspective-universal-lib",
-  "version": "1.13.72",
+  "version": "1.13.73",
   "description": "",
   "module": "module",
   "main": "dist/index.js",
@@ -15,8 +15,8 @@
   "scripts": {
     "compile-ts": "tsc",
     "test": "exit 0",
-    "cp-astro-components": "cp src/components/*.astro dist/components/",
-    "build": "npm run compile-ts && npm run cp-astro-components"
+    "cp-astro-components": "mkdir -p dist/components && cp src/components/*.astro dist/components/",
+    "build": "npm run cp-astro-components && npm run compile-ts"
   },
   "author": "",
   "license": "ISC",
