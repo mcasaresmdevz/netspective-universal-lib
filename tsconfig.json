@@ -12,8 +12,19 @@
     "skipLibCheck": true,
     "outDir": "dist",
     "types": ["node", "vite/client"],
-    "lib": ["ESNext", "DOM"]
+    "lib": ["ESNext", "DOM"],
+    "plugins": [{ "name": "@astrojs/ts-plugin" }]
   },
-  "include": ["src"],
+  "include": [
+    "./src/**/*.js",
+    "./src/**/*.cjs",
+    "./src/**/*.mjs",
+    "./src/**/*.jsx",
+    "./src/**/*.ts",
+    "./src/**/*.cts",
+    "./src/**/*.mts",
+    "./src/**/*.tsx",
+    "./src/**/*.astro"
+  ],
   "exclude": ["node_modules", "**/__tests__/*"]
 }
