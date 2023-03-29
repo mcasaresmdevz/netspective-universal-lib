@@ -1,6 +1,6 @@
 {
   "name": "@mcasaresmdevz/netspective-universal-lib",
-  "version": "1.13.73",
+  "version": "1.13.74",
   "description": "",
   "module": "module",
   "main": "dist/index.js",
