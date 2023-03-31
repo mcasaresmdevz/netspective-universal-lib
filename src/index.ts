@@ -1,5 +1,5 @@
 // ======== Components ======== //
-export { default as ActionItem } from './components/ActionItem.astro';
+// export { default as ActionItem } from './components/ActionItem.astro';
 export { default as AgGridComponent } from './components/AGGrid.web.js';
 export { default as ApacheEChartsComponent } from './components/ApacheEcharts.web.js';
 export { default as ChartJsComponent } from './components/ChartJS.web';
@@ -15,15 +15,19 @@ export { default as WordCountElement } from './components/WordCount.web';
 export { detectFileSysStyleRoute } from './lib/detect-route';
 export { atTimestamp, primaryKeyFK, snakeToCamelCase, tableBuilderAide } from './lib/drizzle-aide';
 export {
-  ForeignContent,
+  type ForeignContent,
   foreignContentSchema,
   queryableContent,
   queryableSanitizedContent,
   readableContent,
 } from './lib/foreign-content';
-export { walkFsEntries, WalkEntry } from './lib/fs-walk';
-export { copyFileIfNewer, copyFileIfNewerMemoizeEffects, CopyFileIfNewerEffects } from './lib/fs';
+export { walkFsEntries, type WalkEntry } from './lib/fs-walk';
 export {
+  copyFileIfNewer,
+  copyFileIfNewerMemoizeEffects,
+  type CopyFileIfNewerEffects,
+} from './lib/fs';
+export type {
   HealthServiceStatus,
   HealthServiceStatusEndpoint,
   HealthyServiceHealthComponentStatus,
@@ -51,6 +55,8 @@ export {
   TypicalServiceHealthMetricName,
   UnhealthyServiceHealthComponentStatus,
   UnhealthyServiceStatus,
+} from './lib/health.js';
+export {
   defaultLinks,
   healthStatusEndpoint,
   healthyComponent,
@@ -70,8 +76,9 @@ export {
   unhealthyService,
 } from './lib/health';
 export { humanFriendlyBytes, humanFriendlyPhrase, humanPath } from './lib/human';
-export { TextInterpolateStrategy, TextInterpolator, textInterpolator } from './lib/interpolate';
-export { KnowledgeGraph } from './lib/knowledge';
+export type { TextInterpolateStrategy, TextInterpolator } from './lib/interpolate';
+export { textInterpolator } from './lib/interpolate';
+export { type KnowledgeGraph } from './lib/knowledge';
 export { apiMssFactory, memoizableApiResponse } from './lib/memoize-api';
 export {
   foreignContentMssFactory,
@@ -81,9 +88,8 @@ export {
   memoizableForeignHTML,
   memoizableForeignReadable,
 } from './lib/memoize-foreign-content';
+export type { FileSysMemoizeStoreStrategyFactory, MemoizeStoreStrategy } from './lib/memoize.js';
 export {
-  FileSysMemoizeStoreStrategyFactory,
-  MemoizeStoreStrategy,
   ensureFsPathExists,
   fsJsonMemoizeStoreStrategy,
   fsTextMemoizeStoreStrategy,
@@ -94,7 +100,7 @@ export {
   singleton,
   singletonSync,
 } from './lib/memoize';
-export {
+export type {
   OpenGraph,
   OpenGraphCustom,
   OpenGraphField,
@@ -105,12 +111,14 @@ export {
   OpenGraphTwitterPlayer,
   OpenGraphVideo,
 } from './lib/open-graph';
-export {
+export type {
   DatabasesConfiguration,
   PostgreSqlConnID,
   PostgreSqlConnURL,
   PostgreSqlDefaultConnID,
   SqlConnState,
+} from './lib/pg-conn.js';
+export {
   dbConfigureFromText,
   dbConnsEnvConfigSchema,
   dbConnsFactory,
@@ -119,7 +127,7 @@ export {
   pgConnUrlPattern,
   prepareConnsFactory,
 } from './lib/pg-conn';
-export {
+export type {
   Content,
   ContentAnalytics,
   ContentCollection,
@@ -137,6 +145,8 @@ export {
   User,
   UserAnalytics,
   Users,
+} from './lib/pg-gitlab-cms';
+export {
   gitLabIssuesQR,
   gitLabNamespaceQR,
   gitLabUsersAnalyticsQR,
@@ -144,38 +154,35 @@ export {
   namespacesContent,
   qualifiedComponentsDelim,
 } from './lib/pg-gitlab-cms';
-export {
+export type {
   ApacheEChartsPluginConfig,
   ApacheEChartsPluginState,
   ApacheEChartsVfileDataShape,
   ChartJsPluginConfig,
   ChartJsPluginState,
   ChartJsVfileDataShape,
-  apacheEChartsPluginSchema,
-  chartJsSchema,
-  remarkPlugin,
 } from './lib/remark-chart';
+export { apacheEChartsPluginSchema, chartJsSchema, remarkPlugin } from './lib/remark-chart';
 export { remarkDiagram } from './lib/remark-diagram.mjs';
 export { remarkReadingTime } from './lib/remark-reading-time.mjs';
 export { remarkRewriteLinks, replaceAsync, rewriteJSXURL } from './lib/remark-rewrite-links.mjs';
 export {
-  RelocationPaths,
+  type RelocationPaths,
   remarkRewritePreviewableURLs,
   typicalTransformRelativePublicSrcAbsUrlWithoutPublic,
   typicalTransformRelativePublicSrcAbsUrlWithoutPublicFn,
 } from './lib/remark-rewrite-previewable-url';
 export { remarkValidateResources } from './lib/remark-validate-resources';
-export { SlugifyOptions, slugifier } from './lib/slug';
-export {
-  TreePathwayUnitSupplier,
-  TreePathwaysSupplier,
-  treePathwaysPreparer,
-} from './lib/tree-pathway';
-export {
+export { type SlugifyOptions, slugifier } from './lib/slug';
+export type { TreePathwayUnitSupplier, TreePathwaysSupplier } from './lib/tree-pathway';
+export { treePathwaysPreparer } from './lib/tree-pathway';
+export type {
   PathTree,
   PathTreeItermediarySupplier,
   PathTreeNode,
   PathTreeTerminalSupplier,
+} from './lib/tree';
+export {
   absolutePath,
   pathTree,
   pathTreeDescendants,
@@ -188,7 +195,7 @@ export {
   selectTreePath,
   treeOf,
 } from './lib/tree';
-export {
+export type {
   EditableSourceFilePathAndName,
   EditableSourceURI,
   EditableTargetURI,
@@ -213,6 +220,8 @@ export {
   WorkspaceEditorIdentity,
   WorkspaceEditorTarget,
   WorkspaceEditorTargetResolver,
+} from './lib/workspace';
+export {
   fromFileUrl,
   gitLabAssetUrlResolver,
   gitLabRemoteID,

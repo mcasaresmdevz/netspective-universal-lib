@@ -2,12 +2,19 @@
   "name": "@mcasaresmdevz/netspective-universal-lib",
   "version": "1.13.77",
   "description": "",
-  "module": "module",
-  "main": "dist/index.mjs",
+  "type": "module",
   "types": "dist/index.d.ts",
   "files": [
-    "/dist"
+    "dist"
   ],
+  "main": "./dist/@mcasaresmdevz/netspective-universal-lib.umd.cjs",
+  "module": "./dist/@mcasaresmdevz/netspective-universal-lib.js",
+  "exports": {
+    ".": {
+      "import": "./dist/@mcasaresmdevz/netspective-universal-lib.js",
+      "require": "./dist/@mcasaresmdevz/netspective-universal-lib.umd.cjs"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mcasaresmdevz/netspective-universal-lib.git"
@@ -16,18 +23,22 @@
     "compile-ts": "tsc",
     "test": "exit 0",
     "cp-astro-components": "mkdir -p dist/components && cp src/components/*.astro dist/components/",
-    "build": "npm run cp-astro-components && npm run compile-ts"
+    "build": "vite build"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@mozilla/readability": "^0.4.2",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "astro": "^2.1.8",
     "dompurify": "^3.0.1",
     "drizzle-orm": "^0.22.0",
     "jsdom": "^21.1.1",
     "mdast": "^3.0.0",
     "mdast-util-mdx-jsx": "^2.1.2",
     "postgres": "^3.3.4",
+    "reading-time": "^1.5.0",
     "unist-util-visit": "^4.1.2",
     "vfile": "^5.3.7",
     "vitest": "^0.29.7",
