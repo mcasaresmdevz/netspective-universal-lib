@@ -1,15 +1,15 @@
 // ======== Components ======== //
 // export { default as ActionItem } from './components/ActionItem.astro';
-export { default as AgGridComponent } from './components/AGGrid.web.js';
-export { default as ApacheEChartsComponent } from './components/ApacheEcharts.web.js';
-export { default as ChartJsComponent } from './components/ChartJS.web';
-export { default as DiagramsNetViewerComponent } from './components/DiagramsNet.web';
-export { default as KrokiComponent } from './components/KrokiDiagram.web';
-export { default as MarkmapComponent } from './components/MarkmapDiagram.web';
-export { default as ReadabilityComponent } from './components/Readability.web';
-export { default as TimeAgoSpanElement } from './components/TimeAgo.web';
-export { default as TimeDurationSpanElement } from './components/TimeDurationNarrative.web';
-export { default as WordCountElement } from './components/WordCount.web';
+// export { default as AgGridComponent } from './components/AGGrid.web.js';
+// export { default as ApacheEChartsComponent } from './components/ApacheEcharts.web.js';
+// export { default as ChartJsComponent } from './components/ChartJS.web';
+// export { default as DiagramsNetViewerComponent } from './components/DiagramsNet.web';
+// export { default as KrokiComponent } from './components/KrokiDiagram.web';
+// export { default as MarkmapComponent } from './components/MarkmapDiagram.web';
+// export { default as ReadabilityComponent } from './components/Readability.web';
+// export { default as TimeAgoSpanElement } from './components/TimeAgo.web';
+// export { default as TimeDurationSpanElement } from './components/TimeDurationNarrative.web';
+// export { default as WordCountElement } from './components/WordCount.web';
 
 // ======== Lib ======== //
 export { detectFileSysStyleRoute } from './lib/detect-route';
@@ -163,9 +163,9 @@ export type {
   ChartJsVfileDataShape,
 } from './lib/remark-chart';
 export { apacheEChartsPluginSchema, chartJsSchema, remarkPlugin } from './lib/remark-chart';
-export { remarkDiagram } from './lib/remark-diagram.mjs';
-export { remarkReadingTime } from './lib/remark-reading-time.mjs';
-export { remarkRewriteLinks, replaceAsync, rewriteJSXURL } from './lib/remark-rewrite-links.mjs';
+export { remarkDiagram } from './lib/remark-diagram.js';
+export { remarkReadingTime } from './lib/remark-reading-time.js';
+export { remarkRewriteLinks, replaceAsync, rewriteJSXURL } from './lib/remark-rewrite-links.js';
 export {
   type RelocationPaths,
   remarkRewritePreviewableURLs,
