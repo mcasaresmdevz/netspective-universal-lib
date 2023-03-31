@@ -9,7 +9,7 @@ export default defineConfig({
       entry: resolve(__dirname, 'src/index.ts'),
       name: '@mcasaresmdevz/netspective-universal-lib',
       // the proper extensions will be added
-      fileName: 'my-lib',
+      fileName: 'index',
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
